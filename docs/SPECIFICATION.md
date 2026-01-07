@@ -105,7 +105,7 @@
 |------|----------|------|
 | フレームワーク | React 18 + TypeScript | 型安全性、コンポーネント再利用性 |
 | ビルドツール | Vite | 高速ビルド、GitHub Pages対応 |
-| 地図ライブラリ | deck.gl + Mapbox GL JS | H3対応、高性能レンダリング |
+| 地図ライブラリ | deck.gl + MapLibre GL JS | H3対応、高性能レンダリング、完全オープンソース |
 | チャートライブラリ | Recharts または D3.js | 散布図・回帰線描画 |
 | UIコンポーネント | Tailwind CSS | 軽量、カスタマイズ性 |
 | 状態管理 | Zustand | 軽量、シンプル |
@@ -128,8 +128,9 @@
 ### 4.4 地図タイル
 | 項目 | 内容 |
 |------|------|
-| ベースマップ | Mapbox (無料枠) または MapTiler |
+| ベースマップ | OpenStreetMap系タイル (OpenFreeMap, Stadia Maps, CartoCDN等) |
 | スタイル | ダークテーマ（夜間光を際立たせる） |
+| ライセンス | オープンソース / 無料 |
 
 ---
 
@@ -167,7 +168,7 @@
 ├─────────────────────────────────────────────────────────┤
 │                    │                                    │
 │                    │      Interactive Map               │
-│   Control Panel    │      (deck.gl + Mapbox)            │
+│   Control Panel    │      (deck.gl + MapLibre)          │
 │                    │                                    │
 │   - Layer Toggle   │                                    │
 │   - Unit Selector  │                                    │
@@ -285,7 +286,7 @@ lumipop/
 
 ### Phase 1: 基盤構築
 - [ ] プロジェクトセットアップ (React + Vite + TypeScript)
-- [ ] 地図ライブラリ統合 (deck.gl + Mapbox)
+- [ ] 地図ライブラリ統合 (deck.gl + MapLibre GL JS)
 - [ ] GitHub Actions デプロイ設定
 
 ### Phase 2: データ処理
@@ -323,6 +324,7 @@ lumipop/
 
 ### ライブラリ
 - [deck.gl](https://deck.gl/)
+- [MapLibre GL JS](https://maplibre.org/)
 - [H3-js](https://h3geo.org/)
 - [Recharts](https://recharts.org/)
 
@@ -333,3 +335,4 @@ lumipop/
 | 日付 | バージョン | 内容 |
 |------|-----------|------|
 | 2026-01-07 | 1.0 | 初版作成 |
+| 2026-01-07 | 1.1 | 地図ライブラリをMapLibre GL JSに変更 |
